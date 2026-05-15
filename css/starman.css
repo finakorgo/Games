@@ -127,6 +127,7 @@
     }
 
     #externalScore {
+        margin-top: 50px;
         margin-right: 100px;
         width: 200px;
         height: 8px;
