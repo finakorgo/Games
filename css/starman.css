@@ -1,4 +1,4 @@
-    /* created by José A Finamor - 15/05/2026 */
+  /* created by José A Finamor - 15/05/2026 */
 
         /*==^.^== Variables ==^.^==*/
          :root {
@@ -48,9 +48,10 @@
             margin-bottom: 10px;
             filter: drop-shadow(0 0 10px var(--accent-glow));
         }
-
-        h2 {
-            text-align: center; 
+        
+        h2 { 
+            text-align: center;
+           }
 
         .subtitle {
             color: var(--text-dim);
@@ -58,14 +59,14 @@
             letter-spacing: 2px;
         }
 
-        .container {
+       /* .container {
             max-width: 1200px;
             margin: 60px auto;
             padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-        } 
+        } */
 
        
 
@@ -79,7 +80,7 @@
              border-radius: 10px;
              justify-content: center;
              align-items: center;
-             margin: 25px auto auto;
+             margin: auto;
              }
        #pop {
             position: absolute;
@@ -118,5 +119,3 @@
             0% { bottom: 100%; }
             100% { bottom: -100%; }
         }
-
-     
