@@ -49,6 +49,9 @@
             filter: drop-shadow(0 0 10px var(--accent-glow));
         }
 
+        h2 {
+            text-align: center; 
+
         .subtitle {
             color: var(--text-dim);
             font-size: 1.2rem;
