@@ -9,6 +9,7 @@
             --glass-border: rgba(255, 255, 255, 0.1);
             --text-main: #e2e8f0;
             --text-dim: #94a3b8;
+            --text-white: #ffffff; 
         }
        
         /*==^.^== Total background configuration ==^.^==*/       
@@ -122,6 +123,7 @@
         text-align: center;
         font-size: 18px;
         font-weight: bold;
+        color: var(--text-white); 
     }
 
     #externalScore {
