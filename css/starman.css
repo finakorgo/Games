@@ -127,7 +127,7 @@
     }
 
     #externalScore {
-        position:absolute;
+        display: grid;
         top: 130px;
         right: 180px;
         width: 40px;
