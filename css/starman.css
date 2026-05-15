@@ -128,8 +128,9 @@
 
     #externalScore {
         display: flex;
+        align-items: center;
         margin-right: 50px;
-        width: 200px;
+        width: 130px;
         height: 20px;
         padding: 10px 18px;
         font-size: 16px;    
