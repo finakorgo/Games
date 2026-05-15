@@ -127,7 +127,7 @@
     }
 
     #externalScore {
-        position: absolute;
+        display: flex;
         top: 130px;
         right: 30px;
         padding: 10px 20px;
@@ -142,7 +142,7 @@
     }
 
      #musicBtn {
-            position: absolute;
+            display: flex;
             top: 130px;
             right: 85px;
             padding: 10px 18px;
