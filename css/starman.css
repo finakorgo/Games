@@ -143,8 +143,8 @@
 
      #musicBtn {
             display: flex;
-            top: 130px;
-            right: 85px;
+            top: 230px;
+            right: 185px;
             padding: 10px 18px;
             font-size: 16px;
             background: var(--bg-color);
