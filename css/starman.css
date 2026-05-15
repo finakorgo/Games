@@ -127,8 +127,8 @@
     }
 
     #externalScore {
-        margin: auto;
-        width: 100px;
+        margin-right: 100px;
+        width: 200px;
         height: 8px;
         padding: 10px 18px;
         font-size: 16px;    
