@@ -128,9 +128,9 @@
 
     #externalScore {
         display: grid;
-        top: 130px;
-        right: 180px;
-        width: 40px;
+        top: 230px;
+        right: 280px;
+        width: 80px;
         height: 8px;
         padding: 10px 18px;
         font-size: 16px;    
@@ -146,7 +146,7 @@
      #musicBtn {
             display: flex;
             top: 230px;
-            left: 185px;
+            left: 285px;
             padding: 10px 18px;
             font-size: 16px;
             background: var(--bg-color);
