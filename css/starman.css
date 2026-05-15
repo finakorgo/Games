@@ -122,6 +122,12 @@
         font-weight: bold;
     }
 
+    .game-desc {
+            color: var(--text-dim);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
 
 
         footer {
