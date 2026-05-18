@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="css/Custom.css" rel="stylesheet">
     <link rel="icon" href="/favicon.ico">
-
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,7 +32,55 @@
         <p class="subtitle">A Próxima Fronteira do Entretenimento</p>
     </header>
 
-    <div class="container"> </div>
+    <div class="container">
+
+    <section id="left" class="flex-1 bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+      <h1 class="text-4xl font-extrabold text-indigo-400 mb-4 text-center">SPACE INVADERS</h1>
+      <em class="text-sm text-gray-400 mb-4 block text-center">Por José Apareido Finamor.</em>
+      <p class="intro text-lg text-gray-300 leading-relaxed mb-4">
+        O game em questão, foi lançado em 1978, pela empresa japonesa Taito. Refiz o game em HTML 5 e Javascript,
+        espero que gostem.
+      </p>
+      <h3 class="text-2xl font-bold text-indigo-300 mb-2">Para Jogar:</h3>
+      <p class="intro text-lg text-gray-300 leading-relaxed">
+        Use as teclas <kbd class="bg-gray-700 px-2 py-1 rounded-md text-white">A</kbd> e <kbd class="bg-gray-700 px-2 py-1 rounded-md text-white">D</kbd> para movimentar a nave para a esquerda/direita,
+        evitando as bombas dos Invaders! Para atirar, use a <kbd class="bg-gray-700 px-2 py-1 rounded-md text-white">Barra de Espaço</kbd>! 
+        Para pausar o jogo, pressione a tecla <kbd class="bg-gray-700 px-2 py-1 rounded-md text-white">P</kbd>!
+        Para cancelar a pausa, pressione novamente a tecla <kbd class="bg-gray-700 px-2 py-1 rounded-md text-white">P</kbd>!
+
+      </p>
+    </section>
+
+    <section id="center" class="flex-[2] bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
+      <div class="mb-4 flex flex-col items-center w-full">
+        <label for="nickname" class="mb-2 text-indigo-300 font-semibold">Nickname:</label>
+        <input id="nickname" type="text" maxlength="12" class="px-3 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400 w-48 mb-2" placeholder="Digite seu nome">
+      </div>
+      <p class="score text-xl font-semibold mb-4">
+        <strong>Score:</strong> <b id="scoreEl" class="text-indigo-400">0</b>
+      </p>    
+
+      <canvas aria-label="Área do jogo Space Invaders"></canvas>
+      <div id="leaderboard" class="mt-6 w-full max-w-xs bg-gray-900 rounded-lg p-4 shadow text-center">
+        <h2 class="text-lg font-bold text-indigo-400 mb-2">Top 5 Scores</h2>
+        <ol id="leaderboardList" class="text-gray-200"></ol>
+      </div>
+    </section>
+
+    <section id="right" class="flex-1 bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center justify-center">
+
+
+
+      <button id="btn" onclick="window.location.reload();"
+              class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full shadow-lg
+                     transition duration-300 ease-in-out transform hover:scale-105
+                     focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50">
+        Play Again
+      </button>
+    </section>
+
+        
+    </div> <!--end container-->
        
 
     <footer>
