@@ -8,23 +8,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 /* Estilos globais para o corpo da pÃ¡gina */
-body {
-    margin: 0;
-    /* Garante que o body ocupe toda a altura da viewport */
-    min-height: 100vh; 
-    display: flex;
-    /* Alinha os itens horizontalmente no centro */
-    justify-content: center; 
-    /* Alinha os itens verticalmente no centro */
-    align-items: center;     
-    background-color: #1a1a1a; /* Um preto um pouco mais suave */
-    color: #f0f0f0; /* Cor de texto padrÃ£o para o body */
-    /* Permite que o layout se adapte em telas menores, empilhando elementos */
-    flex-wrap: wrap; 
-    padding: 20px; /* Adiciona um pouco de padding ao redor do conteÃºdo */
-    box-sizing: border-box; /* Garante que padding e border nÃ£o aumentem o tamanho total */
-    font-family: 'Verdana', sans-serif; /* Define uma fonte padrÃ£o mais legÃ­vel */
-}
+/* created by José A Finamor - 15/05/2026 */
+
+        /*==^.^== Variables ==^.^==*/
+         :root {
+            --bg-color: #0f172a;
+            --accent-soft: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.3);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --text-white: #ffffff; 
+        }
+       
+        /*==^.^== Total background configuration ==^.^==*/       
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+
 
 /* Estilos para a seÃ§Ã£o esquerda (informaÃ§Ãµes/introduÃ§Ã£o) */
 #left {
