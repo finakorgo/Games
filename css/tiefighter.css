@@ -2,249 +2,131 @@
 /*
  * Melhorias no CSS para o layout e elementos da pÃ¡gina.
  * Foco em responsividade, estÃ©tica e legibilidade.
- */
-
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
-
-/* Estilos globais para o corpo da pÃ¡gina */
-/* created by José A Finamor - 15/05/2026 */
-
-        /*==^.^== Variables ==^.^==*/
-         :root {
-            --bg-color: #0f172a;
-            --accent-soft: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.3);
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --text-main: #e2e8f0;
-            --text-dim: #94a3b8;
-            --text-white: #ffffff; 
-        }
-       
-        /*==^.^== Total background configuration ==^.^==*/       
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
-            color: var(--text-main);
-            font-family: 'Rajdhani', sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-        }
-
- h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            letter-spacing: 8px;
-            text-transform: uppercase;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 0 10px var(--accent-glow));
-        }
-        
-       
-
-       /* Garantir que o container seja a referência para o posicionamento */
-       .container {
-           position: relative;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           padding-top: 20px;
-        }
-
-/* Título Starman centralizado */
-     h2.subtitle {
-         text-align: center;
-         margin-bottom: 60px; /* Espaço para os botões ficarem abaixo do título */
-         width: 100%;
-      }
-
-
-/* Estilos para a seÃ§Ã£o esquerda (informaÃ§Ãµes/introduÃ§Ã£o) */
-#left {
-    position: relative;
-    /* Largura flexÃ­vel para melhor responsividade, com um mÃ¡ximo */
-    width: 100%; 
-    max-width: 350px; 
-    height: auto;
-    /* Margem para separar do elemento central em telas maiores */
-    margin-right: 50px; 
-    /* Remove a posiÃ§Ã£o 'top' fixa para melhor alinhamento flexbox */
-    top: auto; 
-    padding: 20px; /* Adiciona padding interno */
-    background-color: #2a2a2a; /* Fundo levemente diferente para a seÃ§Ã£o */
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra sutil */
-    text-align: center; /* Centraliza o texto dentro da caixa */
-    /* Ajusta a margem para telas menores */
-    margin-bottom: 30px; 
-    margin-right: 0; /* Remove a margem direita em telas pequenas */
-}
-
-/* Estilos para tÃ­tulos h1 e h3 */
-h1, h3 {
-    font-family: 'Audiowide', cursive;
-    /* Adiciona uma sombra ao texto para melhor contraste */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
-    margin-bottom: 10px; /* EspaÃ§amento abaixo dos tÃ­tulos */
-}
-
-/* Cores para tÃ­tulos e Ãªnfase */
-h1, h3, em {
-    color: #daa520; /* Darkgoldenrod */
-}
-
-/* Estilos para o parÃ¡grafo de introduÃ§Ã£o */
-.intro {
-    font-family: Verdana, sans-serif;
-    color: #008080; /* Teal */
-    text-align: justify;
-    line-height: 1.6; /* Melhora a legibilidade do texto */
-    padding: 0 10px; /* Pequeno padding horizontal */
-    margin-top: 15px; /* EspaÃ§amento acima do texto */
-}
-
-/* Estilos para a seÃ§Ã£o central (onde o canvas provavelmente estarÃ¡) */
-#center {
-    position: relative;
-    /* Garante que o elemento central seja flexÃ­vel */
-    width: 100%; 
-    max-width: 800px; /* Define uma largura mÃ¡xima para o centro */
-    display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    background-color: #2a2a2a; /* Fundo similar ao #left */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    padding: 20px;
-}
-
-/* Estilos para a exibiÃ§Ã£o da pontuaÃ§Ã£o */
-.score {
-    position: absolute;
-    z-index: 10;
-    color: #f0f0f0; /* Branco suave */
-    left: 20px; /* Ajuste para melhor posicionamento */
-    top: 20px; /* Ajuste para melhor posicionamento */
+/* ===== Layout geral ===== */
+body {
     margin: 0;
-    font-family: 'Audiowide', cursive; /* Usa a fonte Audiowide para a pontuaÃ§Ã£o */
-    font-size: 1.2em; /* Tamanho da fonte um pouco maior */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para destaque */
+    padding: 0;
+    background: #000;
+    color: #00ffcc;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Estilos para o elemento do canvas */
+/* ===== Container principal ===== */
+.main-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* ===== Colunas laterais ===== */
+.sidebar-left,
+.sidebar-right {
+    background: rgba(0, 20, 30, 0.85);
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    box-shadow:
+        0 0 10px rgba(0,255,200,0.4),
+        inset 0 0 10px rgba(0,255,200,0.15);
+}
+
+/* ===== Área central ===== */
+.game-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 0 15px rgba(0,255,200,0.35);
+}
+
+/* ===== Canvas / jogo ===== */
 canvas {
-    display: block; /* Remove espaÃ§o extra abaixo do canvas */
-    margin-top: 20px;
-    background-color: #000; /* Fundo preto para o canvas */
-    border-radius: 8px; /* Cantos arredondados para o canvas */
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra interna e externa */
-    /* Garante que o canvas seja responsivo */
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    border: 3px solid #00ffcc;
+    border-radius: 8px;
+
+    box-shadow:
+        0 0 20px rgba(0,255,200,0.45);
 }
 
-/* Estilos para o elemento da pontuaÃ§Ã£o especÃ­fica */
-#scoreEl {
-    color: #ffa500; /* Laranja vibrante */
-    font-weight: bold; /* Deixa a pontuaÃ§Ã£o mais negrito */
+/* ===== Títulos ===== */
+h1, h2, h3 {
+    color: #00ffff;
+    text-align: center;
+
+    text-shadow:
+        0 0 5px #00ffff,
+        0 0 15px #00ffff;
 }
 
-/* Estilos para o botÃ£o */
-#btn {
-    /* Centraliza o botÃ£o dentro do seu container flex */
-    margin: 20px auto 0 auto; 
-    padding: 10px 20px; /* Aumenta o padding para um botÃ£o maior */
-    width: auto; /* Largura automÃ¡tica baseada no conteÃºdo */
-    min-width: 120px; /* Largura mÃ­nima para o botÃ£o */
-    height: auto;
-    background-color: #008080; /* Teal */
-    color: white;
-    border: none; /* Remove a borda padrÃ£o */
-    border-radius: 25px; /* Mais arredondado */
-    visibility: hidden;
-    cursor: pointer; /* Indica que Ã© clicÃ¡vel */
-    font-family: 'Audiowide', cursive; /* Usa a fonte Audiowide */
-    font-size: 1em; /* Tamanho da fonte do botÃ£o */
-    transition: all 0.3s ease; /* TransiÃ§Ã£o suave para efeitos de hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para o botÃ£o */
+/* ===== Textos ===== */
+p, li, span {
+    color: #bfffee;
+    line-height: 1.6;
 }
 
-/* Efeito de hover para o botÃ£o */
-#btn:hover {
-    background-color: #006666; /* Teal mais escuro no hover */
-    transform: translateY(-3px); /* Efeito de "levantar" */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra maior no hover */
+/* ===== Painéis ===== */
+.panel {
+    margin-bottom: 20px;
+    padding: 12px;
+
+    border: 1px solid rgba(0,255,200,0.4);
+    border-radius: 8px;
+
+    background: rgba(0,0,0,0.4);
 }
 
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column; /* Empilha os elementos em telas menores */
-        padding: 15px;
-    }
+/* ===== Botões ===== */
+button {
+    background: #001f26;
+    color: #00ffcc;
 
-    #left {
-        margin-right: 0; /* Remove margem direita */
-        margin-bottom: 30px; /* Adiciona margem inferior */
-        max-width: 90%; /* Ajusta a largura mÃ¡xima */
-    }
+    border: 2px solid #00ffcc;
+    border-radius: 6px;
 
-    #center {
-        max-width: 90%; /* Ajusta a largura mÃ¡xima */
-    }
+    padding: 10px 15px;
+    cursor: pointer;
 
-    .score {
-        font-size: 1em; /* Reduz o tamanho da fonte da pontuaÃ§Ã£o */
-        left: 15px;
-        top: 15px;
-    }
-
-    #btn {
-        min-width: 100px; /* Ajusta largura mÃ­nima do botÃ£o */
-        padding: 8px 15px; /* Ajusta padding do botÃ£o */
-        font-size: 0.9em; /* Reduz o tamanho da fonte do botÃ£o */
-    }
+    transition: 0.3s;
 }
 
+button:hover {
+    background: #00ffcc;
+    color: #000;
 
+    box-shadow: 0 0 15px #00ffcc;
+}
 
-
-@media (max-width: 480px) {
-    #left, #center {
-        padding: 15px;
-        border-radius: 8px;
+/* ===== Responsividade ===== */
+@media (max-width: 1100px) {
+    .main-container {
+        grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 1.8em; /* Reduz o tamanho do h1 */
+    .sidebar-left,
+    .sidebar-right {
+        order: 2;
     }
 
-    h3 {
-        font-size: 1.2em; /* Reduz o tamanho do h3 */
-    }
-
-    .intro {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do intro */
-        line-height: 1.5;
+    .game-center {
+        order: 1;
     }
 }
