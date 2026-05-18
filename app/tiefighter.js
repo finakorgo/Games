@@ -9,7 +9,7 @@ const c = canvas.getContext('2d');
 canvas.width = 1024;
 canvas.height = 576;
 
-const backgroundAudio = new Audio("Audio/star.mp3");
+const backgroundAudio = new Audio("assets/audio/star.mp3");
 backgroundAudio.loop = true;
 backgroundAudio.play();
 
@@ -22,7 +22,7 @@ class Player {
         this.opacity = 1;
 
         const image = new Image();
-        image.src = './img/spaceship.png';
+        image.src = './assets/spaceship.png';
         image.onload = () => {
             const scale = 0.15;
             this.image = image;
@@ -131,7 +131,7 @@ class Invader {
         this.velocity = { x: 0, y: 0 };
 
         const image = new Image();
-        image.src = './img/invader.png';
+        image.src = './assets/invader.png';
         image.onload = () => {
             const scale = 1;
             this.image = image;
@@ -417,7 +417,7 @@ addEventListener('keydown', ({ key }) => {
                 },
                 velocity: { x: 0, y: -10 }
             }));
-            const laserAudio = new Audio("Audio/sfx-laser1.ogg");
+            const laserAudio = new Audio("assets/audio/sfx-laser1.ogg");
             laserAudio.play();
             break;
     }
